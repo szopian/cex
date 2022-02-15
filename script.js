@@ -1,15 +1,29 @@
+var brands = ['Fender','Vox', 'Line6', 'Taylor'];
 
-let fname;
-fname = 'Greg';
+//var brands = new Array('Fender','Vox', 'Line6', 'Taylor');
 
-function printName(){
 
-console.log('Current character is ' + fname + ' ' + f2name);
-}
+var record = [
+    'opportunity', 19999, '123'
+]
 
-printName();
 
-var f2name;
-f2name= 'Not Greg';
 
-let 
+// var animal = {
+//     type: 'dog',
+//     sound: function() {
+//         console.log('woof!');
+//     }
+// }
+
+// animal.sound();
+
+
+// var Animal = new Object();
+// this.type = 'dog';
+// this.sound = function() {
+//     console.log('woof!!');
+// }
+
+// Animal.sound();
+
