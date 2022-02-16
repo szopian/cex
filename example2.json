@@ -1,6 +1,7 @@
 {
     "name": "White T-shirt",
-    "price": 5.99,"inventory": [      
+    "price": 5.99,
+    "inventory": [      
           
         {
             "size": "M",
