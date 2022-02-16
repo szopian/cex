@@ -1,63 +1,34 @@
-let str = 'Playground';
-console.log(str);
+let fruits = [    
+    { name: 'Apple', qty: 40 },   
+    { name: 'Orange', qty: 20 },    
+    { name: 'Banana', qty: 5 },   
+    { name: 'Tomato', qty: 10 },   
+    { name: 'Mango', qty: 30 }
+];
 
-let d = new Date();
+let abc = fruits.sort((a, b) => a.qty - b.qty);
+//console.log(abc);
 
-console.log(d);
+let students = ["Kate", "Lucy","Sheldon", "Barry","Zara"];
+// Convert each element into a student object.
+let studentsArray = students.map((value,index,array) => {
+    return {    
+        id:index,    
+        name:value  
+    };
+});
+// Print the array elements.
+//console.log(studentsArray);
 
-console.log(d.toString());
-
-console.log(d.toDateString());
-
-console.log(d.toUTCString());
-
-console.log(d.toISOString());
-
-
-
-const start = new Date();
-
-console.log(start - new Date(Date.UTC(2000, 0, 0, 0, 0, 0)));
-console.log(Date.now() - Date.parse(start));
-
-function dateFormat(date){
-    return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
-}
-console.log(dateFormat(start));
-
-
-
-console.log(start);
-
-
-function stringToNum(str){
-    if (Number.isNaN(str)){
-        throw 'String can NOT be converted.'; 
-    }
-
-    if (Number.isInteger(str))  return Number.parseInt(str);
-    return Number.parseFloat(str);
+let maleSprinters = [    
+    { name: "Usain Bolt", time: 9.58 },    
+    { name: "Tyson Gay", time: 9.69 },    
+    { name: "Yohan Blake", time: 9.69 },    
+    { name: "Asafa Powell", time: 9.72 },    
+    { name: "Justin Gatlin", time: 9.76 }
+];
     
-}
-
-console.log(stringToNum('5.55.abcd'));
-
-function message(issue, numSamples){
-    let intro = 'Pause before proceeding:';
-    let timePerSample = 30;
-    let multiplyNumTimeSample = numSamples * timePerSample;
-    return `${intro} ${issue} Wait ${multiplyNumTimeSample} seconds.`
-}
-
-console.log(message('The samples are NOT ready.', 5));
-
-
-function greeting(greet, name){
-    let punct = '.';
-    if(greet.toLowerCase().includes('good morning')){
-        punct = '!';
-    }
-    return greet.concat(' ', name, punct);
-};
-
-console.log(greeting('Welcome and Good Morning', 'Greg'));
+// Find total of sprint time.
+let totalSprintTime = maleSprinters.reduce((acc, value) => acc  + value.name  + ' ', '');
+//Print array elements.
+console.log("Total Sprint Time => " + totalSprintTime);
