@@ -1,3 +1,30 @@
+
+
+
+
+const nums = [1,2,3,4,5];
+const multiplyByTwo = nums.map(num => num * 2);
+console.log(multiplyByTwo);
+
+const createMultiplyFunction = function(num) {
+    return num1 => num1 * num;
+}
+
+const multiplyByTen = createMultiplyFunction(10);
+console.log(multiplyByTen(5));
+
+const greeting = function(name){
+    let greet = `Hello, ${name}!! How are YOU??`;
+    let greetDiv = document.querySelector('.greet');
+    setTimeout(() => greetDiv.innerHTML = greet, 5000);
+}
+greeting('Tessa and Liya');
+
+
+ //====================DATA JSON====================================//=================================DATA JSON=================================//
+ 
+ /*
+ 
  // This example shows how to use index position and dot notation to access parsed JSON data.
     
  const productJson = '{ "name": "White T-shirt", "price": 5.99, "inventory": [ { "size": "S", "quantity": 100 }, { "size": "M", "quantity": 150 }, { "size": "L", "quantity": 75 } ], "returnable": true, "brand": { "name": "Luxury", "origin": "Taiwan" }, "customization": null }';
@@ -41,7 +68,7 @@
 console.log('Object.entries() => ');
 console.log(Object.entries(productJs));
 
-
+*/
  
  //<<+===================================================/////=========================================================
  
