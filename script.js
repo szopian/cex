@@ -1,4 +1,117 @@
 
+const btn = document.getElementById("btn-convert");
+let blob;
+btn.addEventListener("click", loadModule);
+
+function loadModule() {
+    import("../modules/utilities.js")        
+    .then((module) => {            
+        blob = module.convert(file); 
+        // ‘file’ has been defined earlier in the code.        
+    })
+}
+
+
+
+
+
+//==================CLASSES=======================================//=========================================================
+
+class User { 
+    constructor(user, email) {
+        this.user = user;
+        this.email = email; 
+    }
+};
+
+class Employee extends User { 
+    constructor(user, email, id) {   
+        super(user, email);
+        this.employeeId = id; 
+    }
+};
+
+let employ1 = new Employee('team_lead', 'team@cosmicsoft.com', 345);
+console.log(employ1);
+
+
+
+// class MeetingRoom { 
+//     constructor(capacity) {
+//         this.capacity = capacity;
+//         this.canReserve = false; 
+//     };
+//     set reservable(val) {
+//         this.canReserve = val; 
+//     };
+//     get reservable() {
+//         return this.canReserve; 
+//     }
+// };
+
+// let boardRoom = new MeetingRoom(20);
+// boardRoom.reservable = true;
+// console.log(boardRoom.reservable);
+
+// class User { 
+//     constructor() {
+//         this.validUser = true; 
+//     }; 
+//     isUser() {
+//         return true; 
+//     }
+// };
+
+// class Employee extends User { 
+//     isEmployee() {
+//         return true; 
+//     }
+// };
+// let employee1 = new Employee();
+// console.log(employee1);
+// console.log(employee1.isUser());
+// console.log(employee1.isEmployee());
+
+//========================FUNCTIONS=================================//=========================================================
+
+/*
+
+let objGreet = {
+    morningGreet(punct){
+        console.log(`Good Morning ${this.firstName} ${punct}`);
+    },
+    eveningGreet(punct){
+        console.log(`Good Evening ${this.firstName} ${punct}`);
+    }
+}
+
+let user1 = {
+    firstName: 'Adri'
+}
+
+let user2 = {
+    firstName: 'Greg'
+}
+
+objGreet.morningGreet.call(user1, '!');
+objGreet.eveningGreet.apply(user2, ['?']);
+objGreet.eveningGreet.bind(user1, '.')();
+
+
+
+let date;
+let intro;
+let start = document.querySelector('.start');
+
+const showDate = function(){
+    console.log(`${intro} ${date}`);
+}
+
+start.addEventListener('click', showDate);
+
+date = new Date();
+intro = "Today's date is ";
+console.log('Program is running!!');
 
 
 
@@ -20,6 +133,7 @@ const greeting = function(name){
 }
 greeting('Tessa and Liya');
 
+/*
 
  //====================DATA JSON====================================//=================================DATA JSON=================================//
  
