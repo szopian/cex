@@ -1,4 +1,106 @@
 
+const users = [   
+    {
+        user: 'Jon', 
+        title: 'IT Analyst'
+    },   
+    {
+        user: 'Ashley', 
+        title: 'HR Specialist'
+    },
+];
+
+console.log('Starting timer...');
+console.group('Timer Group');
+console.time('timer');
+console.log('Logging timer...');
+console.timeLog('timer');
+console.log('Ending timer...');
+console.timeEnd('timer');
+console.groupEnd('Timer Group');
+
+console.log('Logging table...');
+console.table(users);
+console.assert(users[0].title === 'HR Analyst', 'The first user is not an HR Analyst');
+
+/*
+
+function createTable(rows, columns) {
+    const body = document.querySelector('body'), 
+    table = document.createElement('table'), 
+    tBody = document.createElement('tbody');
+    let count = 0;
+    
+    function createCells(row) {
+        for (let i = 0; i < columns; i++) {
+            const cell = document.createElement('td'); 
+            // Create cells for row     
+            count++;     
+            cell.style = 'text-align:center;';     
+            cell.innerHTML = count;     
+            row.appendChild(cell);   
+        } 
+    };
+    
+    function createRows() {
+        for (let i = 0; i < rows; i++) {
+            const row = document.createElement('tr');
+             // Create row     
+             createCells(row);     
+             tBody.appendChild(row);   
+        } 
+    };
+
+    createRows(); 
+    table.appendChild(tBody); 
+    // Add table body to table. 
+    body.appendChild(table); 
+    // Add table to document body. 
+    table.setAttribute('border', '1'); 
+    table.setAttribute('width', '300'); 
+    table.setAttribute('height', '200');
+};
+
+createTable(4, 3);
+
+*/
+
+//==========================Decotate+++++++++++++++++++++++++////==========================DECORATE+++++++++++++++++++++++++//
+
+/*
+
+
+function log(obj, fn) {
+    return function() {        
+        console.log("Execution of " + fn.name);        
+        console.time("fn");
+        // Invoke function with object's context
+        let val = fn.call(obj);        
+        console.timeEnd("fn");
+        return val;    
+    }
+}
+
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;    
+    }    
+    getUser() {
+        return`[${this.name}][${this.age}]`;    
+    }
+}
+let obj = new User("James", 24);
+// Decorate class method
+let getUser = log(obj, obj.getUser);
+console.log(getUser());
+
+*/
+
+//==========================MODULES+++++++++++++++++++++++++////==========================MODULES+++++++++++++++++++++++++//
+/*
+
+//example...
 const btn = document.getElementById("btn-convert");
 let blob;
 btn.addEventListener("click", loadModule);
@@ -10,12 +112,14 @@ function loadModule() {
         // ‘file’ has been defined earlier in the code.        
     })
 }
+ import {b as bom} from '....';
+ export default bom;
 
-
-
+*/
 
 
 //==================CLASSES=======================================//=========================================================
+/*
 
 class User { 
     constructor(user, email) {
@@ -34,7 +138,7 @@ class Employee extends User {
 let employ1 = new Employee('team_lead', 'team@cosmicsoft.com', 345);
 console.log(employ1);
 
-
+*/
 
 // class MeetingRoom { 
 //     constructor(capacity) {
