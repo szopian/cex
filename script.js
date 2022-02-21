@@ -1,4 +1,23 @@
+let months = [1,2,3,4,5,6,7,8,9,10,11,12];
+let peak = [];
 
+for (let month of months){
+    if (month > 3){
+        peak.push(month);
+    }
+
+    if (month > 5){
+        peak.pop();
+    }
+
+    if (month > 7){
+        peak.unshift(month);
+    }
+}
+
+console.log(peak);
+
+/*
 const users = [   
     {
         user: 'Jon', 
@@ -22,6 +41,8 @@ console.groupEnd('Timer Group');
 console.log('Logging table...');
 console.table(users);
 console.assert(users[0].title === 'HR Analyst', 'The first user is not an HR Analyst');
+
+*/
 
 /*
 
