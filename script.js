@@ -1,4 +1,57 @@
 "use strict"
+//===== SWITCH STATMENT ================//==============
+const grade = '';
+
+switch(grade){
+    case 'A':
+        console.log(`You got ${grade}!`);
+        break;
+    case 'B':
+        console.log(`You got ${grade}!`);
+        break;
+    case 'C':
+        console.log(`You got ${grade}!`);
+        break;
+    case 'D':
+        console.log(`You got ${grade}!`);
+        break;
+    case 'E':
+        console.log(`You got ${grade}!`);
+        break;
+    default:
+       // console.error(`Not valid grade! ==> ${grade} `);
+}
+
+//=== BREAK & CONTINUE =======//=======
+const scores = [20,25,10,0,50,100,90,75];
+for (let i = 0; i < scores.length; i++){
+    if(scores[i] === 0){
+        continue;
+    }
+    //console.log(`You SCORE ==> ${scores[i]}`)
+    if(scores[i] === 100){
+        //console.log(`Congrats You SCORE ${scores[i]} a MAX POINTS!!`);
+        break;
+    }
+}
+
+//====== LOGICAL NOT (!) ======//============
+let user = false;
+if(!user){
+ //console.log('You must be TRUE now!! ')
+}
+ //console.log(!false); //true
+ //console.log(!true); //false
+
+//==== IF STATMENTS =======//================
+const password = 'qwertyqwerty12345@';
+if(password.length >= 12 && password.includes('@')){
+    //console.log('Password STRONG enough!')
+} else if(password.length >= 8 || password.includes('@')){
+    //console.log('Password could be STRONGER you silly!!')
+} else {
+    //console.error('Password is F****ING WEAK!!! Aaaagh!!')
+}
 
 //===FOR LOOPS==========//===================
 for (let i = 0 ; i < 5; i++){
@@ -20,13 +73,11 @@ while(whileLoop<=5){
     whileLoop++;
 }
 //====DO WHILE LOOP=====//=============================
-
 let doWhileLoop = 5;
-
 do {
     //console.log('In Loop', doWhileLoop);
     doWhileLoop++;
-} while(doWhileLoop < 5);
+} while (doWhileLoop < 5);
 
 //======================================//===========================
 let name = 'Greg';
