@@ -1,7 +1,23 @@
 "use strict"
 
 
+let name = 'Greg';
+let program = 'JavaScript';
 
+
+//Concatination
+let str = 'I\'m ' + name + ' happy to learn ' + program + '!!';
+console.log(str);
+
+//TEMPLATE STRING
+let str1 = `I'm ${name} happy to learn ${program}!!`;
+console.log(str1);
+
+//CREATING HTML TAMPLATE
+let html = `
+    <h1>I'm ${name} happy to learn ${program}!!</h1>
+`
+console.log(html);
 
 //STRINGS 
 let email = 'szopian@gmail.com';
