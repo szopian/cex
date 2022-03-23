@@ -11,25 +11,54 @@ const button = document.querySelector('button');
 const items = document.querySelectorAll('li');
 const list = document.querySelector('ul');
 
+const form = document.querySelector('.signup-form');
+const myUser = document.querySelector('#username');
+const feedback = document.querySelector('.feedback');
+const usernamePattern = /^[a-zA-Z]{6,12}$/;
 
-button.addEventListener('click', () => {
-    const li = document.createElement('li');
-    li.textContent = 'do somthing';
-    list.append(li);
-});
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const username = myUser.value;
 
-
-list.addEventListener('click', (e) => {
-    if(e.target.tagName === 'LI'){
-        e.target.style.textDecoration = 'line-through';
+    if(usernamePattern.test(username)){
+        feedback.textContent = 'Valid username! :)';
+    } else {
+        feedback.textContent = 'NOT Valid username! :( letters only & 6 to 12 characters!!!';
     }
 })
 
-list.addEventListener('dblclick', (e) => {
-    if(e.target.tagName === 'LI'){
-        e.target.remove();
+myUser.addEventListener('keyup', e => {
+    //console.log(e.target.value, myUser.value);
+    if(usernamePattern.test(e.target.value)){
+        form.username.setAttribute('class', 'success');
+    }else{
+        form.username.setAttribute('class', 'error');
     }
 })
+
+/*
+const guser = 'gregsz';
+const pattern = /^[a-z]{6,}$/;
+let result = pattern.test(guser);
+console.log(result);
+*/
+// button.addEventListener('click', () => {
+//     const li = document.createElement('li');
+//     li.textContent = 'do somthing';
+//     list.append(li);
+// });
+
+// list.addEventListener('click', (e) => {
+//     if(e.target.tagName === 'LI'){
+//         e.target.style.textDecoration = 'line-through';
+//     }
+// })
+
+// list.addEventListener('dblclick', (e) => {
+//     if(e.target.tagName === 'LI'){
+//         e.target.remove();
+//     }
+// })
 
 // button.addEventListener('click', () => {
 //     console.log('Clicked');
