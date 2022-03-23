@@ -1,9 +1,44 @@
 "use strict"
+//==== STACK AND HEAP =========//========
 
 
+
+//===== OBJECTS =========//======================//=========
+//=== Math Obj===============//==
+// console.log(Math);
+// console.log(Math.PI);
+// console.log(Math.E);
+
+const aarea = 7.7;
+// console.log(Math.round(aarea)); // rounds 7.7 to 8 and 7.4 to 7 
+// console.log(Math.floor(aarea)); // floors down
+// console.log(Math.ceil(aarea));  // ceil up
+// console.log(Math.trunc(aarea)); // takes away .7 
+
+let random = Math.random();
+//console.log(Math.round(random * 100));
+
+//===================================
+let bobguy = {
+    name: 'Bob',
+    blogs: ['oneBlog', 'twoBlog'],
+    login: function(){
+        console.log('bob is logged in!')
+    },
+    //logBlogs: function(){
+    logBlogs(){ //<== is not arrow func //still can use 'this' 
+        console.log(`${bobguy.name} blogs below:`)
+        this.blogs.forEach(blog => console.log(blog));
+    }
+}
+// bobguy.logBlogs();
+// bobguy.login();
+// console.log(bobGuy);
+// console.log(bobGuy.name);
+// console.log(bobGuy['name']);
+// console.log(typeof bobGuy)
 
 //===== FUNCTIONS =========//====================================
-
 //== CALLBACKS AND FOREACH===================
 const ul = document.querySelector('.classMates');
 const classMates = ['Bob', 'Tob', 'Rob'];
@@ -11,7 +46,7 @@ let htmlClassMates = ``;
 
 classMates.forEach((mate, index) => htmlClassMates += `<li>${index + 1}: ${mate}</li>`);
 
-ul.innerHTML = htmlClassMates;
+//ul.innerHTML = htmlClassMates;
 
 /*
 const myFunc = (callbackFunc) => {
