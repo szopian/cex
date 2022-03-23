@@ -9,11 +9,26 @@ const errors = document.querySelectorAll('.error');
 const article = document.querySelector('article');
 const button = document.querySelector('button');
 const items = document.querySelectorAll('li');
+const list = document.querySelector('ul');
 
-items.forEach(item => {
-    item.addEventListener('click', () => {
-        console.log('clicked item!')
-    });
+
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'do somthing';
+    list.append(li);
+});
+
+
+list.addEventListener('click', (e) => {
+    if(e.target.tagName === 'LI'){
+        e.target.style.textDecoration = 'line-through';
+    }
+})
+
+list.addEventListener('dblclick', (e) => {
+    if(e.target.tagName === 'LI'){
+        e.target.remove();
+    }
 })
 
 // button.addEventListener('click', () => {
