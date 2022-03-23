@@ -7,6 +7,18 @@ const content = document.querySelector('.content');
 const paras = document.querySelectorAll('p');
 const errors = document.querySelectorAll('.error');
 const article = document.querySelector('article');
+const button = document.querySelector('button');
+const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        console.log('clicked item!')
+    });
+})
+
+// button.addEventListener('click', () => {
+//     console.log('Clicked');
+// })
 
 // Array.from(article.children).forEach((child) => {
 //     child.classList.add('article-elem');

@@ -1,4 +1,22 @@
-.error{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+li {
+    list-style-type: none;
+    max-width: 200px;
+    padding: 8px;
+    margin: 8px;
+    background-color: #eee;
+    border: 1px dotted #ddd;
+    cursor: pointer;
+}
+
+
+/* .error{
     padding: 10px;
     color: crimson;
     border: 1px dotted crimson;
@@ -8,4 +26,4 @@
     padding: 10px;
     color: limegreen;
     border: 2px dashed limegreen;
-}
+} */
