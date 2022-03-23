@@ -1,22 +1,60 @@
 "use strict"
 //==== DOM DOM DOM =======// ===== DOM DOM DOM ====///=====
-
-
-
-
-
+const para = document.querySelector('p');
+const title = document.querySelector('h1');
+const link = document.querySelector('a');
 const content = document.querySelector('.content');
+const paras = document.querySelectorAll('p');
+const errors = document.querySelectorAll('.error');
+const article = document.querySelector('article');
+
+// Array.from(article.children).forEach((child) => {
+//     child.classList.add('article-elem');
+// });
+
+// console.log(title.parentElement);
+// console.log(title.parentElement.parentElement);
+// console.log(title.nextElementSibling);
+// console.log(title.previousElementSibling);
+// console.log(title.nextElementSibling.parentElement.children);
+
+/*
+paras.forEach(para => {
+    if(para.textContent.includes('error')){
+        para.classList.add('error');
+    } else if(para.textContent.includes('success')){
+        para.classList.add('success');
+    } else {
+        para.style.textShadow = '2px 2px 2px gray'
+    }
+});
+*/
+
+
+//para.classList.add("error");
+//para.classList.remove("error");
+//para.classList.add('success');
+
+//title.setAttribute('style', 'margin: 20%');
+
+// title.style.margin = '20%';
+// title.style.color = 'aqua';
+// title.style.fontSize = '3rem';
+// title.style.textShadow = '2px 2px 2px grey'
+
+//console.log(link.getAttribute('href'));
+//link.setAttribute('href', 'https://szopian.github.io/');
+//link.innerText = 'My web...';
+//link.setAttribute('style', 'color: red');
+//link.setAttribute('class', 'newClass');
+
 //content.innerHTML += `<h2>WHO SAID BLA BLA BLA?!</h2>`
 const people = ['bob', 'rob', 'tod'];
 //people.forEach(person => content.innerHTML += `<p>${person}</p>`);
 
-const para = document.querySelector('p');
 //console.log(para.innerText += ' Hi, Greg!')
 
-const paras = document.querySelectorAll('p');
 //paras.forEach(para => console.log(para.innerText));
-
-const errors = document.querySelectorAll('.error');
 
 //errors.forEach(err => console.log(err));
 //paras.forEach(para => console.log(para))
