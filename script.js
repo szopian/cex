@@ -1,6 +1,28 @@
 "use strict"
-//==== STACK AND HEAP =========//========
+//==== DOM DOM DOM =======// ===== DOM DOM DOM ====///=====
 
+
+
+
+
+const content = document.querySelector('.content');
+//content.innerHTML += `<h2>WHO SAID BLA BLA BLA?!</h2>`
+const people = ['bob', 'rob', 'tod'];
+//people.forEach(person => content.innerHTML += `<p>${person}</p>`);
+
+const para = document.querySelector('p');
+//console.log(para.innerText += ' Hi, Greg!')
+
+const paras = document.querySelectorAll('p');
+//paras.forEach(para => console.log(para.innerText));
+
+const errors = document.querySelectorAll('.error');
+
+//errors.forEach(err => console.log(err));
+//paras.forEach(para => console.log(para))
+
+//console.log(errors);
+//console.log(paras);
 
 
 //===== OBJECTS =========//======================//=========
