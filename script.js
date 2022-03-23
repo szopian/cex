@@ -1,7 +1,59 @@
 "use strict"
+
+
+
+//===== FUNCTIONS =========//====================================
+
+//== CALLBACKS AND FOREACH===================
+const ul = document.querySelector('.classMates');
+const classMates = ['Bob', 'Tob', 'Rob'];
+let htmlClassMates = ``;
+
+classMates.forEach((mate, index) => htmlClassMates += `<li>${index + 1}: ${mate}</li>`);
+
+ul.innerHTML = htmlClassMates;
+
+/*
+const myFunc = (callbackFunc) => {
+    let value = 23;
+    callbackFunc(value);
+}
+myFunc(value =>  console.log(value));
+
+const logMate = (mate, index) => console.log(`${index + 1}: Hey ${mate}`)
+classMates.forEach(logMate);
+*/
+
+// Function Decleration
+function greet(){
+    alert('Hey there!');
+}
+// Function Expression
+const speak = function(name = 'Boss'){
+    alert(`Good day, ${name}!!`)
+};
+//greet();
+//speak('Bob');
+//speak();
+
+// Returning Values
+const calcArea = function(radius){
+    //let area = 3.14 * radius**2; //local scope
+    //return area;
+    // Clean up!!
+    return 3.14 * radius**2;
+};
+// Arrow function =======
+const calcAreaArrowFunc = radius => 3.14 * radius**2;
+
+const areaTwo = calcAreaArrowFunc(5);
+const area = calcArea(5);//store globaly area
+//console.log(area, areaTwo);
+
+
+
 //===== SWITCH STATMENT ================//==============
 const grade = '';
-
 switch(grade){
     case 'A':
         console.log(`You got ${grade}!`);
