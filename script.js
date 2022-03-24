@@ -1,9 +1,71 @@
 "use strict"
 //================== ARRAY ++++++++++++++++//++++++++++++++++ ARRAY ==================
+//=========== FILTER ====-=-=-=--
+const prod = [
+        {name: 'Bob', price: 20},
+        {name: 'Rob', price: 15},
+        {name: 'Bob', price: 10},
+        {name: 'Tod', price: 35}
+    ];
+
+// const filterd = prod.filter(pro => pro.price > 10);
+// console.log(filterd);
+// const promo = filterd.map(prod => `the ${prod.name} is ${prod.price / 2} pounds`) 
+// console.log(promo);
+
+const promos = prod
+    .filter(p => p.price > 10)
+    .map(p => `The ${p.name} is ${p.price} pounds!`);
+console.log(promos)
+
+
+//===== SROT() ++++++++
+
+// const scoresNum = [10, 30, 15 ,25 ,50 ,40 ,5];
+// const namesxyz = ['Bob', 'Tod', 'Rob'];
+
+// namesxyz.sort();
+// namesxyz.sort().reverse();
+
+// let r =  scoresNum.sort();
+// console.log(r)
+
+// ===== ====== ====== FIND METHOD ====// =-=-=-=-=-=
+// const scoresNum = [10, 30, 15 ,25 ,50 ,40 ,5];
+
+// const firstHighScore = scoresNum.find(score => score > 40);
+
 
 //=======REDUCE METHOD +++_+_+_+_+_++
 
-const scoresNum = [10, 30, 15 ,25 ,50 ,40 ,5];
+// const products = [
+//     {name: 'Bob', price: 20},
+//     {name: 'Rob', price: 15},
+//     {name: 'Bob', price: 10},
+//     {name: 'Tod', price: 35}
+// ]
+
+// const bobsBill = products.reduce((acc, curr) => {
+//     if(curr.name === 'Bob'){
+//         acc += curr.price;
+//     }
+//     return acc;
+// }, 0);
+
+// console.log(bobsBill);
+
+//const scoresNum = [10, 30, 15 ,25 ,50 ,40 ,5];
+
+// const r = scoresNum.reduce((acc, curr) => {
+//     if(curr > 25){
+//         acc+=curr;
+//     }
+//     return acc;
+// }, 0);
+
+// console.log(r);
+
+
 
 //==== MAP METHOD +_+_+_+_+_+_+_+_+_+^^^^^^^
 
