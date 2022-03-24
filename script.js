@@ -1,40 +1,104 @@
 "use strict"
+//================== ARRAY ++++++++++++++++//++++++++++++++++ ARRAY ==================
+
+//=======REDUCE METHOD +++_+_+_+_+_++
+
+const scoresNum = [10, 30, 15 ,25 ,50 ,40 ,5];
+
+//==== MAP METHOD +_+_+_+_+_+_+_+_+_+^^^^^^^
+
+// const products = [
+//     {name: 'Bob', price: 20},
+//     {name: 'Rob', price: 15},
+//     {name: 'Zac', price: 10},
+//     {name: 'Tod', price: 35}
+// ]
+
+// let r = products.map(p => {
+//     if(p.price > 15){
+//         return {name: p.name, price: p.price / 2};
+//     } else {
+//         return p;
+//     }
+// });
+// console.log(products);
+// console.log(r);
+
+
+// const slaesPrice = scoresNum.map(p => p / 2);
+// console.log(slaesPrice);
+
+
+//== FILTER METHOD _+_+_+_+_+_+_+_==============^^^^
+
+// const usersx = [
+//     {name:'Bob', premium: true},
+//     {name:'Rob', premium: false}
+// ];
+// const usersxFilter = usersx.filter((u) => u.premium);
+// console.log(usersxFilter);
+
+// for (let i = 0; i < scoresNum.length; i++){
+//     if(scoresNum[i] < 40){
+//         //console.log(scoresNum[i]);
+//     }
+// }
+
+// scoresNum.forEach(score => {
+//     if(score > 15){
+//         console.log('pass :)');
+//     } else {
+//         console.log('faild :(');
+//     }
+// });
+
+// let r = scoresNum.filter((s) => s < 20);
+// console.log(r);
+
+
+
 //==== DOM DOM DOM =======// ===== DOM DOM DOM ====///=====
-const para = document.querySelector('p');
-const title = document.querySelector('h1');
-const link = document.querySelector('a');
-const content = document.querySelector('.content');
-const paras = document.querySelectorAll('p');
-const errors = document.querySelectorAll('.error');
-const article = document.querySelector('article');
-const button = document.querySelector('button');
-const items = document.querySelectorAll('li');
-const list = document.querySelector('ul');
 
-const form = document.querySelector('.signup-form');
-const myUser = document.querySelector('#username');
-const feedback = document.querySelector('.feedback');
-const usernamePattern = /^[a-zA-Z]{6,12}$/;
+// const para = document.querySelector('p');
+// const title = document.querySelector('h1');
+// const link = document.querySelector('a');
+// const content = document.querySelector('.content');
+// const paras = document.querySelectorAll('p');
+// const errors = document.querySelectorAll('.error');
+// const article = document.querySelector('article');
+// const button = document.querySelector('button');
+// const items = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const username = myUser.value;
+// const form = document.querySelector('.signup-form');
+// const myUser = document.querySelector('#username');
+// const feedback = document.querySelector('.feedback');
+// const usernamePattern = /^[a-zA-Z]{6,12}$/;
 
-    if(usernamePattern.test(username)){
-        feedback.textContent = 'Valid username! :)';
-    } else {
-        feedback.textContent = 'NOT Valid username! :( letters only & 6 to 12 characters!!!';
-    }
-})
 
-myUser.addEventListener('keyup', e => {
-    //console.log(e.target.value, myUser.value);
-    if(usernamePattern.test(e.target.value)){
-        form.username.setAttribute('class', 'success');
-    }else{
-        form.username.setAttribute('class', 'error');
-    }
-})
+
+
+
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     const username = myUser.value;
+
+//     if(usernamePattern.test(username)){
+//         feedback.textContent = 'Valid username! :)';
+//     } else {
+//         feedback.textContent = 'NOT Valid username! :( letters only & 6 to 12 characters!!!';
+//     }
+// })
+
+// myUser.addEventListener('keyup', e => {
+//     //console.log(e.target.value, myUser.value);
+//     if(usernamePattern.test(e.target.value)){
+//         form.username.setAttribute('class', 'success');
+//     }else{
+//         form.username.setAttribute('class', 'error');
+//     }
+// })
 
 /*
 const guser = 'gregsz';
