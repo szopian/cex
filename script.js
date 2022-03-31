@@ -1,42 +1,101 @@
 "use strict"
+// SYMBOLS =============================================
+// NOT new Symbol() <------ just Symbol() ==============
+
+// const symboleOne = Symbol();
+// const symboleTwo = Symbol();
+
+// console.log(symboleOne, typeof symboleOne);
+// console.log(symboleTwo, typeof symboleTwo);
+
+// console.log(symboleTwo === symboleOne);
+
+
+// ++++++++++++++++++++++ SETS =========================
+
+// const nameArr = ['bob', 'tod', 'rob','bob', 'tod', 'rob'];
+// console.log(nameArr);
+
+// const nameSet = new Set(nameArr);
+// console.log(nameSet);
+
+// const uniqValues = [...new Set(nameArr)];
+// console.log(uniqValues);
+
+// const ages = new Set();
+// ages.add(25);
+// ages.add(25);
+// ages.add(30).add(40);
+// ages.delete(25);
+
+// //ages.length does NOT work 
+// const length = ages.size;
+// console.log(length);
+// console.log(ages);
+// ages.clear();
+// console.log(ages);
+
+
+// REST PARAMITER ==============
+
+// const double = (...nums) => {
+//   console.log(nums);
+//   return nums.map(num => num * 2);
+// }
+// const result = double(1,2,3,4,5,6);
+// console.log(result);
+
+
+// const people = ['bob', 'tod', 'rob'];
+// const members = ['don', 'van', ...people]
+// console.log(members);
+
+// const person = {name: 'gog', age: 1, job: 'none'};
+// const clonePerson = {...person};
+// console.log(clonePerson);
+
+
 // ===== OBJECTS Oriented programing +++++++++++++++++++++++++++++++++++++
 
-// ======= PROTOTYPE MODEL ======
+// ======= PROTOTYPE MODEL and Inharitance ======
+
+// function User(username, email){
+//     this.username = username;
+//     this.email = email;
+// }
+
+// User.prototype.login = function(){
+//     console.log(`${this.username} has logged in..`);
+//     // to allow chaning 
+//     return this;
+// }
+
+// User.prototype.logout = function(){
+//     console.log(`${this.username} has logged out..`);
+//     return this;
+// }
 
 
-function User(username, email){
-    this.username = username;
-    this.email = email;
-}
+// function Admin(username, email, title){
+//     User.call(this, username, email);
+//     this.title = title;
+// }
 
-User.prototype.login = function(){
-    console.log(`${this.username} has logged in..`);
-    // to allow chaning 
-    return this;
-}
+// Admin.prototype = Object.create(User.prototype);
+// Admin.prototype.deletUser = function(){
+//     // USER delete code ...
+// }
 
-User.prototype.logout = function(){
-    console.log(`${this.username} has logged out..`);
-    return this;
-}
+// const userOne = new User('Bob', 'bob@g.com');
+// const userTwo = new User('Tod', 'tod@g.com');
+// const userThree = new Admin('Rob', 'rob@g.com', 'black-belt');
 
-function Admin(username, email, title){
-    User.call(this, username, email);
-    this.title = title;
-}
+// console.log(userOne, userTwo, userThree);
+// userOne.login();
+// userTwo.logout();
 
-Admin.prototype = Object.create(User.prototype);
-
-const userOne = new User('Bob', 'bob@g.com');
-const userTwo = new User('Tod', 'tod@g.com');
-const userThree = new Admin('Rob', 'rob@g.com', 'black-belt');
-
-console.log(userOne, userTwo, userThree);
-userOne.login();
-userTwo.logout();
-
-// chaning 
-userOne.login().logout();
+// // chaning 
+// userOne.login().logout();
 
 
 
